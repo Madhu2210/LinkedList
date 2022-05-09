@@ -3,15 +3,13 @@ package com.bridglabz;
 public class DataStructure {
     public static void main(String[] args) {
         LinkedList<Integer> LinkedList=new LinkedList();
-        LinkedList.push(70);
-        LinkedList.push(30);
         LinkedList.push(56);
-
+        LinkedList.push(30);
+        LinkedList.push(70);
+        LinkedList.pop();
         LinkedList.print();
 
-        Integer data = LinkedList.pop();
-        System.out.println(data);
+        LinkedList.Search(30);
 
-        LinkedList.print();
     }
 }

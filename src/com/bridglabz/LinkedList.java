@@ -14,20 +14,22 @@ public class LinkedList<T> {
             head = obj1;
         }
     }
+
     public void add(T data) {
-        Node<T> obj2= new Node<>(data);
+        Node<T> obj2 = new Node<>(data);
         if (head == null) {
             head = obj2;
             tail = obj2;
         } else {
-            tail.next=obj2;
+            tail.next = obj2;
             tail = obj2;
         }
     }
+
     public void insertBetween(T insertData) {
-        Node<T> obj2= new Node<>(insertData);
-        head.next=obj2;
-        obj2.next=tail;
+        Node<T> obj2 = new Node<>(insertData);
+        head.next = obj2;
+        obj2.next = tail;
     }
 
     public void print() {
@@ -37,14 +39,29 @@ public class LinkedList<T> {
             temp = temp.next;
         }
     }
-            public T pop() {
-                Node<T> popElement = head;
-                T element = popElement.data;
-                Node<T> nextEle = popElement.next;
-                popElement.data = null;
-                popElement.next = null;
-                head = nextEle;
-                return element;
+    public T pop() {
+        Node<T> popelement = head;
+        T element=popelement.data;
+        Node<T> nextelem=popelement.next;
+        popelement.data=null;
+        popelement.next=null;
+        head=nextelem;
+        return element;
 
-        }
     }
+    public Node<T> Search(T searchData)
+    {
+        Node<T> temp=head;
+        Node<T> searchedNode=null;
+        while(temp!=null)
+        {
+            if(temp.data.equals(searchData))
+            {
+                searchedNode=temp;
+
+            }
+            temp=temp.next;
+        }
+        return searchedNode;
+    }
+}
