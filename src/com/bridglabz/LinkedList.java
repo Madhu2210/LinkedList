@@ -35,8 +35,16 @@ public class LinkedList<T> {
         while (temp != null) {
             System.out.print(temp.data + "->");
             temp = temp.next;
-
+        }
+    }
+            public T pop() {
+                Node<T> popElement = head;
+                T element = popElement.data;
+                Node<T> nextEle = popElement.next;
+                popElement.data = null;
+                popElement.next = null;
+                head = nextEle;
+                return element;
 
         }
     }
-}

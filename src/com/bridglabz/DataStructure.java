@@ -8,5 +8,10 @@ public class DataStructure {
         LinkedList.push(56);
 
         LinkedList.print();
+
+        Integer data = LinkedList.pop();
+        System.out.println(data);
+
+        LinkedList.print();
     }
 }
